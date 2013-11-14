@@ -87,7 +87,7 @@ USE_SOUTH = True
 # In the format (('Full Name', 'email@example.com'),
 #                ('Full Name', 'anotheremail@example.com'))
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+     ('Sean O\'Donnell', 'sean@odonnell.nu'),
 )
 MANAGERS = ADMINS
 
@@ -98,7 +98,7 @@ MANAGERS = ADMINS
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = None
+TIME_ZONE = UTC
 
 # If you set this to True, Django will use timezone-aware datetimes.
 USE_TZ = True
