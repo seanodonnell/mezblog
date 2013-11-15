@@ -1,6 +1,7 @@
 
 
 ALLOWED_HOSTS = ['.odonnell.nu']
+BLOG_SLUG = "posts"
 ######################
 # MEZZANINE SETTINGS #
 ######################
@@ -112,7 +113,7 @@ LANGUAGE_CODE = "en"
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
 # production. Best set to ``True`` in local_settings.py
-DEBUG = False
+DEBUG = True
 
 # Whether a user's session cookie expires when the Web browser is closed.
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
@@ -226,6 +227,7 @@ TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 ################
 
 INSTALLED_APPS = (
+    "meztheme",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -241,7 +243,7 @@ INSTALLED_APPS = (
     "mezzanine.blog",
     "mezzanine.forms",
     "mezzanine.pages",
-    "mezzanine.galleries",
+    #"mezzanine.galleries",
     "mezzanine.twitter",
     #"mezzanine.accounts",
     #"mezzanine.mobile",

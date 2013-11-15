@@ -1,0 +1,7 @@
+archive url for all posts
+set up permanent redirect for feed url
+permanent redirects for other pages? fix slugs?
+migrate comments
+
+
+
