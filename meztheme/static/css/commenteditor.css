@@ -1,0 +1,24 @@
+body.mceContentBody
+{
+    color: #272727;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mceContentBody p
+{
+    line-height: 1.5;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.mceContentBody a, p
+{
+    font-family:Verdana,Helvetica,'Bitstream Vera Sans',Arial,sans-serif;
+    font-size: 15px;
+}
+
+.mceContentBody a
+{
+    color: #036061;
+}

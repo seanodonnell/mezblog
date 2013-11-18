@@ -1,5 +1,5 @@
 {% extends "blog/blog_post_list.html" %}
-{% load mezzanine_tags comment_tags keyword_tags rating_tags i18n future disqus_tags %}
+{% load mezzanine_tags comment_tags keyword_tags rating_tags i18n future disqus_tags staticfiles %}
 
 {% block meta_title %}{{ blog_post.meta_title }}{% endblock %}
 
@@ -11,6 +11,12 @@
 {% block meta_description %}{% metablock %}
 {{ blog_post.description }}
 {% endmetablock %}{% endblock %}
+
+{% block extra_js %}
+{% compress js %}
+<script type="text/javascript" src="{% static "js/commenteditor.js" %} "></script>
+{% endcompress %}
+{% endblock %}
 
 {% block title %}
 {% editable blog_post.title %}{{ blog_post.title }}{% endeditable %}

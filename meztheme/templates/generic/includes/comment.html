@@ -1,5 +1,4 @@
 {% load i18n mezzanine_tags comment_tags rating_tags %}
-
     {% for comment in comments_for_thread %}
         {% if not comment.is_removed and comment.is_public %}
     		<div class="{% if not comment.is_public %}unapproved{% endif %}{% if comment.is_removed %}removed{% endif %}{% if comment.by_author %}owner{% endif %}comment" id="comment-{{ comment.id }}">
