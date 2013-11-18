@@ -46,23 +46,19 @@
 
 </head>
 <body id="{% block body_id %}body{% endblock %}">
-
-<div class="navbar navbar-fixed-top">
-<div class="navbar-inner">
-<div class="container">
-    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-    </a>
-    {% if settings.SITE_TITLE %}<a class="brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
-    {% if settings.SITE_TAGLINE %}<p class="navbar-text">{{ settings.SITE_TAGLINE }}</p>{% endif %}
-</div>
-</div>
+<div id="wrapper">
+<div id="header">
+    {% if settings.SITE_TITLE %}<a id="homelink"  href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
+    {% if settings.SITE_TAGLINE %}<p class="subtitle">{{ settings.SITE_TAGLINE }}</p>{% endif %}
 </div>
 
-<div class="container">
+<ul id="nav">
+        <li><a href="/archive/">Archive</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="{% url "blog_post_feed" "rss" %}">RSS Feed</a></li>
+    </ul>
 
+<div id="rightcolumn">
 {% nevercache %}
 {% for message in messages %}
 <div class="alert alert-{{ message.tags }}" data-alert="alert">
@@ -70,38 +66,16 @@
 </div>
 {% endfor %}
 {% endnevercache %}
-</div>
 
-<div class="container">
-<div class="row">
-
-<div class="span2 left">
-    {% block left_panel %}
-
-<ul id="nav">
-        <li><a href="/archive/">Archive</a></li>
-        <li><a href="/contact/">Contact</a></li>
-        <li><a href="{% url "blog_post_feed" "rss" %}">RSS Feed</a></li>
-    </ul>
-    {% endblock %}
-</div>
-
-<div class="span7 middle">
     {% block main %}{% endblock %}
 </div>
 
-
-
-</div>
-</div>
-
 <footer>
-<div class="container">
-<p>&copy; Copyright 2004-2010 Sean O&#39;Donnell</p>
+<p>&copy; Copyright 2004-{% now "Y" %} Sean O&#39;Donnell</p>
 </div>
 </footer>
 
 {% include "includes/footer_scripts.html" %}
-
+</div>
 </body>
 </html>

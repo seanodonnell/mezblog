@@ -22,32 +22,21 @@
 {% endblock %}
 
 {% block main %}
+{% editable blog_post.title %}
+    <a class="posttitle" href="{{ blog_post.get_absolute_url }}">{{ blog_post.title }}</a>
+{% endeditable %}
 
 {% block blog_post_detail_postedby %}
 {% editable blog_post.publish_date %}
-<h6>
-    {% trans "Posted by" %}:
-    {% with blog_post.user as author %}
-    <a href="{% url "blog_post_list_author" author %}">{{ author.get_full_name|default:author.username }}</a>
-    {% endwith %}
-    {% blocktrans with sometime=blog_post.publish_date|timesince %}{{ sometime }} ago{% endblocktrans %}
-</h6>
+<span class="postsubtitle">
+<span class="postdate">
+        {{ blog_post.publish_date|date:"H:i l \t\h\e jS \o\f F  Y" }}
+</span>
+<span class="postcomments"> <a href="{{ blog_post.get_absolute_url }}#comments">{% blocktrans count comments_count=blog_post.comments_count %}{{ comments_count }} comment{% plural %}{{ comments_count }} comments{% endblocktrans %}</a></span>
+</span>
 {% endeditable %}
 {% endblock %}
 {% block blog_post_detail_commentlink %}
-<p>
-    {% if blog_post.allow_comments %}
-        {% if settings.COMMENTS_DISQUS_SHORTNAME %}
-            (<a href="{{ blog_post.get_absolute_url }}#disqus_thread"
-                data-disqus-identifier="{% disqus_id_for blog_post %}">{% spaceless %}
-                {% trans "Comments" %}
-            {% endspaceless %}</a>)
-        {% else %}(<a href="#comments">{% spaceless %}
-            {% blocktrans count comments_count=blog_post.comments_count %}{{ comments_count }} comment{% plural %}{{ comments_count }} comments{% endblocktrans %}
-            {% endspaceless %}</a>)
-        {% endif %}
-    {% endif %}
-</p>
 {% endblock %}
 
 {% block blog_post_detail_featured_image %}
@@ -80,7 +69,6 @@
 {% endif %}
 {% endblock %}
 
-{% rating_for blog_post %}
 
 {% block blog_post_detail_sharebuttons %}
 {% set_short_url_for blog_post %}

@@ -1,11 +1,54 @@
+a, p, li, span, div, th, td
+{
+    font-family:Verdana,Helvetica,'Bitstream Vera Sans',Arial,sans-serif;
+    font-size: 1em;
+}
+
+a, p, li, span, div, th, td
+{
+    font-family:Verdana,Helvetica,'Bitstream Vera Sans',Arial,sans-serif;
+    font-size: 1em;
+}
+
+a
+{
+    color: #036061;
+    text-decoration: dotted;
+}
+
+a.posttitle
+{
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.posttitle:hover
+{
+    text-decoration: underline;
+}
+
+
 .navbar-fixed-top
 {
 	position: relative;
 }
 
+div#wrapper
+{
+	width: 53em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 body
 {
+	color: #272727;
+	text-align: justify;
 	padding-top: 0px;
+	font-size: 1em;
 }
 
 .navbar-fixed-top .navbar-inner,
@@ -20,4 +63,253 @@ body
 {
 	font-size: 24pt;
 	font-weight: bold;
+	float: none;
+}
+
+.container,
+  .navbar-static-top .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    margin-top: 2em;
+  }
+
+.navbar-text {
+	float:none;
+        display: block;
+	font-size:12pt;
+	font-style:italic;
+	margin:0; opacity:.6;
+	line-height: 10pt;
+	margin-top: 0.5em;
+}
+
+#header
+{
+	margin-left: 10em;
+	margin-top: 2em;
+        line-height: normal;
+}
+
+
+#mainarea
+{
+	width: 33em;
+	float: left;
+}
+
+ul#nav
+{
+	width: 10em;
+	float: left;
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+        line-height: normal;
+}
+
+#rightcolumn
+{
+	width: 33em;
+	float: left;
+	padding: 0px;
+	margin: 0px;
+	line-height: normal;
+}
+
+p
+{
+    line-height: 1.5;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+#posts
+{
+    margin: 0px;
+    padding: 0px;
+    list-style:none;
+}
+
+#posts li.post
+{
+    margin-bottom: 50px;
+}
+
+span.postsubtitle
+{
+    display: block;
+}
+span.postsubtitle span.postdate, div.ownercomment span.date, div.comment span.date
+{
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+    font-size: 9pt;
+    color: #515353;
+}
+
+.pagination
+{
+	font-size: 0.8em;
+}
+
+div.removedcomment
+{
+    border: 1px red dotted;
+}
+
+div.unapprovedcomment
+{
+    border: 1px yellow dotted;
+}
+
+
+span.postsubtitle span.postcomments
+{
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+    font-size: 9pt;
+    color: #515353;
+    margin-left: 20px;
+}
+
+#header a#homelink:hover
+{
+    text-decoration:underline;
+}
+
+
+#homelink
+{
+color: #000000;
+font-family: Georgia,'Bitstream Vera Sans Serif','Lucida Grande',Helvetica,Verdana,Arial,sans-serif;
+margin-bottom: 0px;
+text-decoration: none;
+font-size: 24pt;
+font-weight: bold;
+}
+
+#homelink:hover
+{
+        text-decoration: none;
+}
+
+
+p.subtitle
+{
+
+    font-size: 10pt;
+    color: #515353;
+    font-family: Georgia,'Bitstream Vera Sans Serif','Lucida Grande',Helvetica,Verdana,Arial,sans-serif
+    font-style: normal;
+    margin-top: 0px;
+}
+
+a, p, li, span, div, th, td
+{
+    font-family:Verdana,Helvetica,'Bitstream Vera Sans',Arial,sans-serif;
+    font-size: 1em;
+}
+
+footer
+{
+    color: #515353;
+    font-size: 10pt;
+    display: block;
+    clear: both;
+
+}
+
+p.footer
+{
+    color: #515353;
+    font-size: 10pt;
+    display: block;
+    clear: both;
+}
+
+blockquote p
+{
+    padding: 0px 0px 0px 0px;
+    margin-top: 0px;
+    font-size: 11pt;
+    padding-bottom: 20px;
+    float: left;
+    font-style: italic;
+    background: url(/static/blog/images/quote_down.png) bottom right no-repeat;
+}
+
+
+blockquote
+{
+    padding: 2em;
+    font-size: 1.2em;
+    background: url(/static/blog/images/quote_up.png) top left no-repeat;
+    width: 23em;
+    margin: 0.5em;
+}
+
+cite
+{
+    font-size: 9pt;
+    float: right;
+}
+
+div.comment, div.ownercomment
+{
+    border: 1px dotted #272727;
+    padding: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+}
+
+div.ownercomment
+{
+    border: 1px solid #036061;
+}
+
+div.commenter
+{
+    font-size: 9pt;
+    padding-top: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px dotted #272727;
+}
+
+div.comment span.date
+{
+    margin-left:20px;
+}
+
+#comment_form
+{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#comment_form li label
+{
+    display: block;
+}
+#comment_form li input#id_name,#comment_form li input#id_url, #comment_form li input#id_email
+
+
+{
+    width: 300px;
+}
+
+#comment_form li label[for="id_honeypot"]
+{
+    display: none;
+}
+
+#comment_form li #id_honeypot
+{
+    display: none;
+}
+
+li 
+{
+	line-height: normal;
 }

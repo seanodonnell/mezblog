@@ -1,7 +1,12 @@
 archive url for all posts
 set up permanent redirect for feed url
-permanent redirects for other pages? fix slugs?
+fix slugs
 migrate comments
+solutoin for syntax editing
+upload / attach files
+css styles for inline editor
+put back rich comments?
+
 
 
 
