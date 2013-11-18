@@ -4,7 +4,7 @@
         {% if not comment.is_removed and comment.is_public %}
     		<div class="{% if not comment.is_public %}unapproved{% endif %}{% if comment.is_removed %}removed{% endif %}{% if comment.by_author %}owner{% endif %}comment" id="comment-{{ comment.id }}">
         {% editable comment.is_public comment.is_removed %}
-            <p>{{ comment.comment|comment_filter }}</p>
+            <p>{% autoescape off %}{{ comment.comment|comment_filter }}{% endautoescape %}</p>
 	    <div class="commenter">
 	    <span class="name">
 	    {% if comment.url %}
@@ -29,7 +29,7 @@
         {% if request.user.is_staff %}
 	<div class="{% if comment.is_removed %}removed{% elif not comment.is_public %}unapproved{% endif %}{% if comment.by_author %}owner{% endif %}comment" id="comment-{{ comment.id }}">
         {% editable comment.is_public comment.is_removed %}
-            <p>{{ comment.comment|comment_filter }}</p>
+            <p>{% autoescape off %}{{ comment.comment|comment_filter }}{% endautoescape %}</p>
 	    <div class="commenter">
 	    <span class="name">
 	    {% if comment.url %}

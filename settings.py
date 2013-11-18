@@ -333,6 +333,9 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 # }
 
 
+#Turning off comment filtering, as I escape them on the way into the db
+COMMENT_FILTER = 'sanitize_comments.models.comment_filter'
+
 ##################
 # LOCAL SETTINGS #
 ##################
