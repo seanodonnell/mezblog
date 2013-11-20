@@ -2,7 +2,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
-from mezzanine.core.views import direct_to_template
+#from mezzanine.core.views import direct_to_template
 
 
 admin.autodiscover()
@@ -54,6 +54,14 @@ urlpatterns = patterns("",
 
     url("^$", "mezzanine.blog.views.blog_post_list", name="home"),
 
+    # adding all posts archive page
+    url("^archive/$" ,
+        "mezarchive.views.blog_post_archive", name="blog_archive"),
+
+    # adding a simpler feed url
+    url("^feed/$" ,
+        "mezzanine.blog.views.blog_post_feed", {'format':'rss'}, name="blog_post_feed"
+    ),
     # MEZZANINE'S URLS
     # ----------------
     # ADD YOUR OWN URLPATTERNS *ABOVE* THE LINE BELOW.

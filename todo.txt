@@ -1,12 +1,8 @@
-migrate comments
-archive url for all posts
-set up permanent redirect for feed url or fix feed url?
-solution for syntax editing
-upload / attach files
-css style for editors
 Try TINYMCE_SETUP_JS = '/static/js/tinymce_setup.js'. Replace static with
 STATIC_URL.
-spell check
+solution for syntax editing
+check all posts, spell check, upload / attach files
+backup, change secrets, settingsproduction.py and reload content
 
 
 
