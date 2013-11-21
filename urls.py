@@ -73,6 +73,7 @@ urlpatterns = patterns("",
     # ``mezzanine.urls``, go right ahead and take the parts you want
     # from it, and use them directly below instead of using
     # ``mezzanine.urls``.
+    ("^pygments/", include("django_mce_pygments.urls")),
     ("^", include("mezzanine.urls")),
 
     # MOUNTING MEZZANINE UNDER A PREFIX
