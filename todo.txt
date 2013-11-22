@@ -1,4 +1,3 @@
-Try TINYMCE_SETUP_JS = '/static/js/tinymce_setup.js'. Replace static with
 STATIC_URL.
 solution for syntax editing
 check all posts, spell check, upload / attach files

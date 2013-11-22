@@ -227,9 +227,9 @@ TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 ################
 
 INSTALLED_APPS = (
-    "django_mce_pygments",
     "meztheme",
     "mezarchive",
+    "django_mce_pygments",
     "sanitize_comments",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -337,6 +337,9 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 
 #Turning off comment filtering, as I escape them on the way into the db
 COMMENT_FILTER = 'sanitize_comments.models.comment_filter'
+
+#Using a custom tinymce setup script (css/plugins)
+TINYMCE_SETUP_JS = '/static/js/tinymce_setup.js'
 
 ##################
 # LOCAL SETTINGS #
