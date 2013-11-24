@@ -2,6 +2,11 @@
 #turning this off to allow pygments to work
 RICHTEXT_FILTER_LEVEL = 3
 
+
+MCE_DEFAULT_LEXERS = ['Python', 'JavaScript']
+MCE_DEFAULT_STYLE = 'pastie' 
+
+
 ALLOWED_HOSTS = ['.odonnell.nu']
 BLOG_SLUG = "posts"
 ######################
