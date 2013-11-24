@@ -2,6 +2,7 @@ solution for syntax editing - pygments popup loading, but not complete
 	step 1. takes python/js highlights + inserts
 	step 2. line nos + preview
         step 2. adds source file as attachment to post
+comment count on posts includes deleted comments - fix that
 check all posts, spell check, upload / attach files
 backup, change secrets, settingsproduction.py and reload content
 investigate circus

@@ -1,4 +1,6 @@
 
+#turning this off to allow pygments to work
+RICHTEXT_FILTER_LEVEL = 3
 
 ALLOWED_HOSTS = ['.odonnell.nu']
 BLOG_SLUG = "posts"
