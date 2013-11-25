@@ -3,6 +3,7 @@
 *.db
 *.swo
 *.swp
+*.swn
 .DS_Store
 .coverage
 local_settings.py
