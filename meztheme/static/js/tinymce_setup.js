@@ -83,3 +83,22 @@ if (typeof tinyMCE != 'undefined') {
 	});
 
 }
+
+
+// disable any spellchecker's that are active before submiting
+// otherwise we hit a bug that causes that editor to not
+// actually submit it's text.
+
+$(document).ready(function(){
+console.log("settings up");
+$('input[type="submit"]').click(function(){
+        if (typeof window.tinyMCE !== 'undefined') {
+            for (var id in tinyMCE.editors) {
+                var ed = tinyMCE.editors[id];
+                if (ed.plugins && ed.plugins.spellchecker && ed.plugins.spellchecker.active) {
+                    ed.plugins.spellchecker._done();
+                }
+            }
+        }
+});
+});
