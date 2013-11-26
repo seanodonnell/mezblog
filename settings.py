@@ -236,6 +236,7 @@ TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 ################
 
 INSTALLED_APPS = (
+    "django_mce_spellcheck",
     "meztheme",
     "mezarchive",
     "django_mce_pygments",

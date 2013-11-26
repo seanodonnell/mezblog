@@ -330,3 +330,11 @@ div.sourcelink
     border: 1px solid rgba(0, 0, 0 ,0.15);
     border-radius: 4px;
 }
+
+span.sourcelinklabel
+{
+    font-weight: bold;
+    padding: 5px;
+    margin-right: 10px;
+    
+}

@@ -1,12 +1,26 @@
-solution for syntax editing - pygments popup loading, but not complete
-        - style the whole thing
-        - finish docs
+fix spellchecker problem
+         possible workaround -
 
+               // disable any spellchecker's that are active before submiting
+        // otherwise we hit a bug that causes that editor to not
+        // actually submit it's text (within IE only).
+        if (typeof window.tinyMCE !== 'undefined') {
+            for (var id in tinyMCE.editors) {
+                var ed = tinyMCE.editors[id];
+                if (ed.plugins && ed.plugins.spellchecker && ed.plugins.spellchecker.active) {
+                    ed.plugins.spellchecker._done();
+                }
+            }
+        }
+document spellchecker params
+finish docs
+doc js config
+doc all settings
 check all posts, spell check, upload / attach files
 backup, change secrets, settingsproduction.py and reload content
 investigate circus
 get deployment scripts working
-
+try akismet when deployed
 
 
 

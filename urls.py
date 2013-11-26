@@ -74,6 +74,7 @@ urlpatterns = patterns("",
     # from it, and use them directly below instead of using
     # ``mezzanine.urls``.
     ("^pygments/", include("django_mce_pygments.urls")),
+    ("^spellcheck/", include("django_mce_spellcheck.urls")),
     ("^", include("mezzanine.urls")),
 
     # MOUNTING MEZZANINE UNDER A PREFIX
