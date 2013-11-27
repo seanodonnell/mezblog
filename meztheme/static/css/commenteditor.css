@@ -1,3 +1,8 @@
+a, p, li, span, div, th, td {
+    font-family: Verdana,Helvetica,'Bitstream Vera Sans',Arial,sans-serif;
+    font-size: 1em;
+}
+
 body.mceContentBody
 {
     color: #272727;
@@ -21,4 +26,72 @@ body.mceContentBody
 .mceContentBody a
 {
     color: #036061;
+}
+
+.pygments span, .pygments pre {
+    font-size: 9pt;
+    font-family: "Courier New",Courier,monospace;
+}
+
+pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0px 0px 10px;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+code, pre {
+    color: rgb(51, 51, 51);
+}
+
+span.sourcelinklabel {
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+div.sourcelink {
+    background-color: rgb(245, 245, 245);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+blockquote p
+{
+    padding: 0px 0px 0px 0px;
+    margin-top: 0px;
+    font-size: 11pt;
+    padding-bottom: 20px;
+    float: left;
+    font-style: italic;
+    background: url(/static/img/quote_down.png) bottom right no-repeat;
+    border-left: none;
+}
+
+blockquote {
+    padding: 2em;
+    font-size: 1.2em;
+    background: url("/static/img/quote_up.png") no-repeat scroll left top transparent;
+    width: 23em;
+    margin: 0.5em;
+    border-left: none;
+}
+
+p
+{
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+
+body p
+{
+    line-height: 1.5;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }

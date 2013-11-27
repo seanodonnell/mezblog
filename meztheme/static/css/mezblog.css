@@ -10,6 +10,8 @@ a, p, li, span, div, th, td
     font-size: 1em;
 }
 
+
+
 a
 {
     color: #036061;
@@ -116,7 +118,7 @@ ul#nav
 	line-height: normal;
 }
 
-p
+body p
 {
     line-height: 1.5;
     margin-top: 1.5em;
@@ -227,7 +229,7 @@ p.footer
     clear: both;
 }
 
-blockquote p
+body blockquote p
 {
     padding: 0px 0px 0px 0px;
     margin-top: 0px;
@@ -235,17 +237,19 @@ blockquote p
     padding-bottom: 20px;
     float: left;
     font-style: italic;
-    background: url(/static/blog/images/quote_down.png) bottom right no-repeat;
+    background: url(/static/img/quote_down.png) bottom right no-repeat;
+    border-left: none;
 }
 
 
-blockquote
+body blockquote
 {
     padding: 2em;
     font-size: 1.2em;
-    background: url(/static/blog/images/quote_up.png) top left no-repeat;
+    background: url(/static/img/quote_up.png) top left no-repeat;
     width: 23em;
     margin: 0.5em;
+    border-left: none;
 }
 
 cite
