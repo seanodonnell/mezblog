@@ -4,7 +4,6 @@ doc js config
 doc all settings
 break sanitize and theme into their own projects
 remove unaltered templates from theme/blog projects
-check all posts, spell check, upload / attach files
 backup, change secrets, settingsproduction.py and reload content
 investigate circus
 get deployment scripts working
