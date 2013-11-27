@@ -131,7 +131,7 @@ SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
-USE_I18N = False
+USE_I18N = True
 
 # Make these unique, and don't share it with anybody.
 SECRET_KEY = "6893aac2-8c2a-4722-8f41-19e930d0ee29faa02870-3a07-4300-8d90-8289b3b34d1531a76d0a-caac-455a-bd85-f0807ed210be"
