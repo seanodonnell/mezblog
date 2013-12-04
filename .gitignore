@@ -8,3 +8,4 @@
 .coverage
 local_settings.py
 /static
+meztheme/static/misc/

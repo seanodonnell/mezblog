@@ -9,6 +9,11 @@ MCE_DEFAULT_LEXERS = ['Python', 'JavaScript']
 MCE_DEFAULT_STYLE = 'pastie' 
 
 
+#Turning off comment filtering, as I escape them on the way into the db
+COMMENT_FILTER = 'django_html_comments.models.comment_filter'
+
+#COMMENT_CLASS = 'django.contrib.comments.models.Comment'
+COMMENT_CLASS = 'mezzanine.generic.models.ThreadedComment'
 ALLOWED_HOSTS = ['.odonnell.nu']
 BLOG_SLUG = "posts"
 ######################
@@ -236,11 +241,12 @@ TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 ################
 
 INSTALLED_APPS = (
+    "django_html_comments",
     "django_mce_spellcheck",
     "meztheme",
     "mezarchive",
     "django_mce_pygments",
-    "sanitize_comments",
+    "django_html_comments",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -345,8 +351,6 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 # }
 
 
-#Turning off comment filtering, as I escape them on the way into the db
-COMMENT_FILTER = 'sanitize_comments.models.comment_filter'
 
 #Using a custom tinymce setup script (css/plugins)
 TINYMCE_SETUP_JS = '/static/js/tinymce_setup.js'

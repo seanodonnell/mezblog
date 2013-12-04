@@ -90,7 +90,6 @@ if (typeof tinyMCE != 'undefined') {
 // actually submit it's text.
 
 $(document).ready(function(){
-console.log("settings up");
 $('input[type="submit"]').click(function(){
         if (typeof window.tinyMCE !== 'undefined') {
             for (var id in tinyMCE.editors) {
