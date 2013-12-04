@@ -7,5 +7,6 @@
 .DS_Store
 .coverage
 local_settings.py
+prod_settings.py
 /static
 meztheme/static/misc/
