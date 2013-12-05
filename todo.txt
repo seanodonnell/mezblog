@@ -1,4 +1,3 @@
-backup, change secrets, settingsproduction.py and reload content
 investigate circus
 get deployment scripts working
 try akismet when deployed
