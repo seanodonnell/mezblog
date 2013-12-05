@@ -1,0 +1,20 @@
+Install virtualbox and vagrant
+    sudo apt-get install virtualbox
+    sudo apt-get install vagrant
+    
+Create a home for your vagrant instances
+    mkdir -p ~/Vagrant/test
+
+    cd ~/Vagrant/test
+
+Initialize the instance
+
+    vagrant init lucid64
+
+Test it out
+
+    vagrant up
+    vagrant ssh
+
+
+
