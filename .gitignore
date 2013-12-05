@@ -10,3 +10,6 @@ local_settings.py
 prod_settings.py
 /static
 meztheme/static/misc/
+mezblog.egg-info/
+build
+dist

@@ -1,8 +1,3 @@
-break sanitize and theme into their own projects
-move mezarchive into its own app
-finish docs
-doc all settings
-remove unaltered templates from theme/blog projects
 backup, change secrets, settingsproduction.py and reload content
 investigate circus
 get deployment scripts working
