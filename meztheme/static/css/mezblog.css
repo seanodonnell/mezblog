@@ -45,12 +45,17 @@ div#wrapper
 	margin-right: auto;
 }
 
-body
+html body
 {
 	color: #272727;
 	text-align: justify;
 	padding-top: 0px;
-	font-size: 1em;
+	font-size: 100%;
+}
+
+html
+{
+    font-size: 100%;
 }
 
 .navbar-fixed-top .navbar-inner,
@@ -218,6 +223,7 @@ footer
     font-size: 10pt;
     display: block;
     clear: both;
+    background-color: #ffffff;
 
 }
 
@@ -247,7 +253,7 @@ body blockquote
     padding: 2em;
     font-size: 1.2em;
     background: url(/static/img/quote_up.png) top left no-repeat;
-    width: 23em;
+    width: 25em;
     margin: 0.5em;
     border-left: none;
 }
