@@ -13,3 +13,4 @@ meztheme/static/misc/
 mezblog.egg-info/
 build
 dist
+.vagrant
