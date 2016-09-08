@@ -85,21 +85,20 @@ def _deploy():
 
     confirm_settings()
     prod_check()
-    deploy_notify()
     archive_build()
-    link_dev_code()
+#    link_dev_code()
     put_build_archives()
-    extract_build_archives()
-    create_links()
-    host_env_update()
-    collect_static()
-    migrate_db()
-    run_hooks("post_migrate")
-    restart_uwsgi()
-    run_hooks("post_restart")
-    tag_build()
-    put_version_txt()
-    cleanup()
+#    extract_build_archives()
+#    create_links()
+#    host_env_update()
+#    collect_static()
+#    migrate_db()
+#    run_hooks("post_migrate")
+#    restart_uwsgi()
+#    run_hooks("post_restart")
+#    tag_build()
+#    put_version_txt()
+#    cleanup()
 
 
 def add_hook(hook_name, hook):
@@ -139,7 +138,6 @@ def rollback(environment, buildid=None, **overrides):
     if buildid is None:
         fabsettings.rollback_settings(environment, "previous")
         prod_check()
-        rollback_notify(" the previous version ")
         _revert_deploy_links()
         restart_uwsgi()
     else:
@@ -153,7 +151,6 @@ def rollback(environment, buildid=None, **overrides):
         if env.autorollback == 'y' or prompt("Rollback to %s? [y/n]" % (
                 buildid), default="y", validate="[yn]") == 'y':
             if exists(env.rollback_build):
-                rollback_notify(buildid)
                 run("rm {current_link}".format(**env))
                 run("ln -s {rollback_build} {current_link}".format(**env))
                 restart_uwsgi()
@@ -162,30 +159,13 @@ def rollback(environment, buildid=None, **overrides):
                     **env))
 
 
-def rollback_notify(build_id):
-    if env.environment not in ["vagrant", "dev"]:
-        user = gittools.get_username()
-        msg = ("%s is ROLLING BACK %s %s to %s") % (
-            user, env.project, env.environment, build_id)
-
-
-def deploy_notify():
-    if env.environment not in ["vagrant", "dev"]:
-        user = gittools.get_username()
-        msg = ("%s is DEPLOYING %s %s\n(branch %s , "
-               "git-ref: %s) to %s (%r)") % (
-            user, env.project, env.version, env.gitref,
-            env.commit_ref, env.environment, env.host)
-
 
 def archive_build():
     if in_dev_mode():
         return
-    local(("git archive --format=tar.gz {gitref} "
-           "--worktree-attributes > deploy.tgz".format(**env)))
-    local("mkdir -p build/")
-    # extract to local build/ dir
-    local("tar -xzvf deploy.tgz -C build/")
+    local(("git archive -o deploy.tgz {gitref}:src".format(**env)))
+#    local(("git archive --format=tar.gz {gitref} "
+#        "--worktree-attributes > deploy.tgz src".format(**env)))
 
 
 def put_build_archives():

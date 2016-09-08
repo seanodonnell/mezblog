@@ -8,26 +8,26 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.hostname = "app1.mezblog.odonnell.nu"
   config.vm.network :private_network, ip: "172.16.0.105" 
   config.ssh.forward_agent = true
-#  config.vm.provision "shell", path: "bootstrap.sh", args: "app1.mezblog.odonnell.nu"
+  config.vm.provision "shell", path: "bootstrap.sh", args: "app1.mezblog.odonnell.nu"
   config.vm.provision :host_shell do |host_shell|
       host_shell.inline = 'fab gen_keys:minion_name=app1.mezblog.odonnell.nu -H 172.16.0.155 -u root'
   end
-## yip, this is here twice... it tends to fail the first time for reasons
-## I cannot figure out...
+
   config.vm.provision :host_shell do |host_shell|
       host_shell.inline = 'fab preseed -H app1.mezblog.odonnell.nu -u vagrant'
   end
-#  config.vm.provision :host_shell do |host_shell|
-#      host_shell.inline = 'fab preseed -H app1.mezblog.odonnell.nu -u vagrant'
-#  end
+  config.vm.provision :host_shell do |host_shell|
+      host_shell.inline = 'fab preseed -H app1.mezblog.odonnell.nu -u vagrant'
+  end
+  
   config.vm.provision :host_shell do |host_shell|
       host_shell.inline = 'fab postseed -H app1.mezblog.odonnell.nu -u vagrant'
   end
-#
-#
-#  config.vm.provision :salt do |salt|
-#    salt.run_highstate = true
-#  end
+
+
+  config.vm.provision :salt do |salt|
+    salt.run_highstate = true
+  end
 #
 #  config.vm.provision :host_shell do |host_shell|
 #      host_shell.inline = 'fab loaduserkey -H app1.mezblog.odonnell.nu -u vagrant'

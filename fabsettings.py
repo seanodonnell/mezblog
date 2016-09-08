@@ -58,7 +58,6 @@ def _global_settings():
     env.user = fabconfig.DEPLOY_USER
 
     env.project = fabconfig.PROJECT
-    env.smoke_tests = fabconfig.SMOKE_TESTS
     env.deploy_root = fabconfig.DEPLOY_ROOT
     env.web_root = fabconfig.WEB_ROOT
     env.application_link = os.path.join(env.web_root, "current")
