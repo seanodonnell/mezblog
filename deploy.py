@@ -88,9 +88,9 @@ def _deploy():
     archive_build()
 #    link_dev_code()
     put_build_archives()
-#    extract_build_archives()
-#    create_links()
-#    host_env_update()
+    extract_build_archives()
+    create_links()
+    host_env_update()
 #    collect_static()
 #    migrate_db()
 #    run_hooks("post_migrate")
@@ -164,8 +164,6 @@ def archive_build():
     if in_dev_mode():
         return
     local(("git archive -o deploy.tgz {gitref}:src".format(**env)))
-#    local(("git archive --format=tar.gz {gitref} "
-#        "--worktree-attributes > deploy.tgz src".format(**env)))
 
 
 def put_build_archives():
