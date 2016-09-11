@@ -17,3 +17,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -y update
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y install salt-minion
 sudo service salt-minion stop
 sudo sed -i '1i master: 172.16.0.155' /etc/salt/minion
+
+# Fix for permission problem in vagrant 1.8.5
+chmod 0600 /home/vagrant/.ssh/authorized_keys

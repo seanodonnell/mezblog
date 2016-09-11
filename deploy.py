@@ -91,7 +91,7 @@ def _deploy():
     extract_build_archives()
     create_links()
     host_env_update()
-#    collect_static()
+    collect_static()
 #    migrate_db()
 #    run_hooks("post_migrate")
 #    restart_uwsgi()
@@ -171,6 +171,8 @@ def put_build_archives():
         return
     run("mkdir -p {release_folder}".format(**env))
     put("deploy.tgz", "{release_folder}/deploy.tgz".format(**env))
+    put("deploy/prod_settings.py",
+        "{release_folder}/prod_settings.py".format(**env))
 
 
 def create_links():
@@ -265,7 +267,7 @@ def migrate_db():
             with prefix("export DJANGO_SETTINGS_MODULE={0}".format(
                         env.django_settings)):
                 if env.get('dbsync', False) is True:
-                    run("{0}/src/{1}manage.py  migrate".format(
+                    run("{0}/{1}manage.py  migrate".format(
                         env.current_link, env.manage_prefix))
 
 
@@ -274,7 +276,7 @@ def collect_static():
         with cd(env.current_link):
             with prefix("export DJANGO_SETTINGS_MODULE={0}".format(
                         env.django_settings)):
-                run("python {0}/src/{1}manage.py  "
+                run("python {0}/{1}manage.py  "
                     "collectstatic --noinput".format(
                         env.current_link, env.manage_prefix))
 

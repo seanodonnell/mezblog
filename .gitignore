@@ -14,3 +14,4 @@ mezblog.egg-info/
 build
 dist
 .vagrant
+src/mezblog/prod_settings.py

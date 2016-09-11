@@ -1,4 +1,6 @@
 
+TEST_RUNNER = 'django.test.simple.DjangoTestSuiteRunner'
+
 #turning this off to allow pygments to work
 RICHTEXT_FILTER_LEVEL = 3
 
@@ -6,7 +8,7 @@ COMMENTS_UNAPPROVED_VISIBLE = False
 COMMENTS_REMOVED_VISIBLE = False
 
 MCE_DEFAULT_LEXERS = ['Python', 'JavaScript']
-MCE_DEFAULT_STYLE = 'pastie' 
+MCE_DEFAULT_STYLE = 'pastie'
 
 
 #Turning off comment filtering, as I escape them on the way into the db
