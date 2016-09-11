@@ -171,7 +171,7 @@ def put_build_archives():
         return
     run("mkdir -p {release_folder}".format(**env))
     put("deploy.tgz", "{release_folder}/deploy.tgz".format(**env))
-    put("deploy/prod_settings.py",
+    put("src/{project}/{environment}_settings.py".format(**env),
         "{release_folder}/prod_settings.py".format(**env))
 
 
