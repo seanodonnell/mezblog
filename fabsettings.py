@@ -61,8 +61,9 @@ def _global_settings():
     env.deploy_root = fabconfig.DEPLOY_ROOT
     env.web_root = fabconfig.WEB_ROOT
     env.application_link = os.path.join(env.web_root, "current")
-    env.django_settings = "{0}.{1}_settings".format(
-        env.project, env.environment)
+    env.django_settings = "{0}.settings".format(env.project)
+    #env.django_settings = "{0}.{1}_settings".format(
+    #    env.project, env.environment)
 
     env.deploy_path = os.path.join(env.web_root, env.environment)
     env.release_folder = os.path.join(env.deploy_path, env.build_folder)
