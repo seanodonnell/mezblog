@@ -1,4 +1,5 @@
 Mezzanine==1.4.16
 django_html_comments
 django_mce_pygments
+django_mce_spellcheck
 mysql-python
