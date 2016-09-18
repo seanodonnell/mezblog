@@ -92,7 +92,7 @@ def _deploy():
     create_links()
     host_env_update()
     collect_static()
-#    migrate_db()
+    migrate_db()
 #    run_hooks("post_migrate")
 #    restart_uwsgi()
 #    run_hooks("post_restart")
@@ -262,13 +262,15 @@ def confirm_settings():
 
 
 def migrate_db():
+
+    import fabconfig
+    migrate_command = getattr(fabconfig, 'MIGRATE_COMMAND', 'migrate')
     with prefix(env.venv):
         with cd(env.current_link):
             with prefix("export DJANGO_SETTINGS_MODULE={0}".format(
                         env.django_settings)):
-                if env.get('dbsync', False) is True:
-                    run("{0}/{1}manage.py  migrate".format(
-                        env.current_link, env.manage_prefix))
+                run("{0}/{1}manage.py  {2}".format(
+                    env.current_link, env.manage_prefix, migrate_command))
 
 
 def collect_static():

@@ -71,7 +71,6 @@ def _global_settings():
     env.manage_prefix = fabconfig.MANAGE_PREFIX
     env.previous_link = os.path.join(env.deploy_path, "previous")
     env.media_files = os.path.join(env.deploy_path, "media_files")
-    env.dbsync = env.get('dbsync')
     env.manage_prefix = fabconfig.MANAGE_PREFIX
     env.venv, env.venv_path = _get_venv()
 
