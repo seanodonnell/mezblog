@@ -8,7 +8,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "mezblog",
         "USER": "mezblog",
-        "PASSWORD": "Phah3hai",
+        "PASSWORD": "password",
         # Set to empty string for localhost. Not used with sqlite3.
         "HOST": "",
         # Set to empty string for default. Not used with sqlite3.
