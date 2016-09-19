@@ -1,3 +1,4 @@
+filebrowser_safe==0.2.31
 Mezzanine==1.4.16
 BeautifulSoup
 django_html_comments
