@@ -93,12 +93,12 @@ def _deploy():
     host_env_update()
     collect_static()
     migrate_db()
-#    run_hooks("post_migrate")
-#    restart_uwsgi()
-#    run_hooks("post_restart")
-#    tag_build()
-#    put_version_txt()
-#    cleanup()
+    run_hooks("post_migrate")
+    restart_uwsgi()
+    run_hooks("post_restart")
+    tag_build()
+    put_version_txt()
+    cleanup()
 
 
 def add_hook(hook_name, hook):
