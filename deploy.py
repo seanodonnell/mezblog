@@ -90,6 +90,7 @@ def _deploy():
     put_build_archives()
     extract_build_archives()
     create_links()
+    put_settings()
     host_env_update()
     collect_static()
     migrate_db()
@@ -171,8 +172,12 @@ def put_build_archives():
         return
     run("mkdir -p {release_folder}".format(**env))
     put("deploy.tgz", "{release_folder}/deploy.tgz".format(**env))
+
+def put_settings():
+    if in_dev_mode():
+        return
     put("src/{project}/{environment}_settings.py".format(**env),
-        "{release_folder}/prod_settings.py".format(**env))
+        "{current_link}/{project}/prod_settings.py".format(**env))
 
 
 def create_links():
