@@ -248,7 +248,6 @@ INSTALLED_APPS = (
     "meztheme",
     "mezarchive",
     "django_mce_pygments",
-    "django_html_comments",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
