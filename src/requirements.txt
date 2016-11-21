@@ -1,3 +1,4 @@
+django==1.10.3
 filebrowser_safe==0.2.31
 Mezzanine==1.4.16
 BeautifulSoup
