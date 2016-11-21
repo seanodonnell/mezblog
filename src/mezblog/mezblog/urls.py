@@ -2,6 +2,8 @@
 from django.conf.urls import include, url
 from django.contrib import admin
 
+import mezzanine.blog.views as blog_views
+import mezarchive.views as mezarchive_views
 admin.autodiscover()
 
 # Add the urlpatterns for any custom Django applications here.
@@ -12,7 +14,7 @@ urlpatterns = [
 
     # Change the admin prefix here to use an alternate URL for the
     # admin interface, which would be marginally more secure.
-    url("^admin/", admin.site.urls),
+    #url("^admin/", admin.site.urls),
 
     # We don't want to presume how your homepage works, so here are a
     # few patterns you can use to set it up.
@@ -49,15 +51,15 @@ urlpatterns = [
     # ``settings.py`` module, and delete the blog page object from the
     # page tree in the admin if it was installed.
 
-    url("^$", "mezzanine.blog.views.blog_post_list", name="home"),
+    url("^$", blog_views.blog_post_list, name="home"),
 
     # adding all posts archive page
     url("^archive/$",
-        "mezarchive.views.blog_post_archive", name="blog_archive"),
+        mezarchive_views.blog_post_archive, name="blog_archive"),
 
     # adding a simpler feed url
     url("^feed/$",
-        "mezzanine.blog.views.blog_post_feed",
+        blog_views.blog_post_feed,
         {'format': 'rss'}, name="blog_post_feed"
         ),
     # MEZZANINE'S URLS
