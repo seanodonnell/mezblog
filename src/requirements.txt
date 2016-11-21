@@ -3,7 +3,7 @@ django-contrib-comments==1.7.3
 filebrowser_safe==0.2.31
 Mezzanine==4.2.2
 BeautifulSoup
-django_html_comments
+django_html_comments==0.3
 django_mce_pygments==0.1.1
 django_mce_spellcheck==0.1.1
 mysql-python
