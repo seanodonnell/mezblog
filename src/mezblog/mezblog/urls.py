@@ -1,9 +1,6 @@
 
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 from django.contrib import admin
-
-#from mezzanine.core.views import direct_to_template
-
 
 admin.autodiscover()
 
@@ -11,11 +8,11 @@ admin.autodiscover()
 # You can also change the ``home`` view to add your own functionality
 # to the project's homepage.
 
-urlpatterns = patterns("",
+urlpatterns = [
 
     # Change the admin prefix here to use an alternate URL for the
     # admin interface, which would be marginally more secure.
-    ("^admin/", include(admin.site.urls)),
+    url("^admin/", include(admin.site.urls)),
 
     # We don't want to presume how your homepage works, so here are a
     # few patterns you can use to set it up.
@@ -27,7 +24,7 @@ urlpatterns = patterns("",
     # one homepage pattern, so if you use a different one, comment this
     # one out.
 
-    #url("^$", direct_to_template, {"template": "index.html"}, name="home"),
+    # url("^$", direct_to_template, {"template": "index.html"}, name="home"),
 
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
     # ---------------------------------------------
@@ -55,13 +52,14 @@ urlpatterns = patterns("",
     url("^$", "mezzanine.blog.views.blog_post_list", name="home"),
 
     # adding all posts archive page
-    url("^archive/$" ,
+    url("^archive/$",
         "mezarchive.views.blog_post_archive", name="blog_archive"),
 
     # adding a simpler feed url
-    url("^feed/$" ,
-        "mezzanine.blog.views.blog_post_feed", {'format':'rss'}, name="blog_post_feed"
-    ),
+    url("^feed/$",
+        "mezzanine.blog.views.blog_post_feed",
+        {'format': 'rss'}, name="blog_post_feed"
+        ),
     # MEZZANINE'S URLS
     # ----------------
     # ADD YOUR OWN URLPATTERNS *ABOVE* THE LINE BELOW.
@@ -73,9 +71,9 @@ urlpatterns = patterns("",
     # ``mezzanine.urls``, go right ahead and take the parts you want
     # from it, and use them directly below instead of using
     # ``mezzanine.urls``.
-    ("^pygments/", include("django_mce_pygments.urls")),
-    ("^spellcheck/", include("django_mce_spellcheck.urls")),
-    ("^", include("mezzanine.urls")),
+    url("^pygments/", include("django_mce_pygments.urls")),
+    url("^spellcheck/", include("django_mce_spellcheck.urls")),
+    url("^", include("mezzanine.urls")),
 
     # MOUNTING MEZZANINE UNDER A PREFIX
     # ---------------------------------
@@ -93,7 +91,7 @@ urlpatterns = patterns("",
 
     # ("^%s/" % settings.SITE_PREFIX, include("mezzanine.urls"))
 
-)
+]
 
 # Adds ``STATIC_URL`` to the context of error pages, so that error
 # pages can use JS, CSS and images.
