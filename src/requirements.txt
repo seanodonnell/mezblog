@@ -1,6 +1,6 @@
 django==1.10.3
 filebrowser_safe==0.2.31
-Mezzanine==1.4.16
+Mezzanine==4.2.2
 BeautifulSoup
 django_html_comments
 django_mce_pygments==0.1.1
