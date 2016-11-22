@@ -174,7 +174,7 @@ def put_build_archives():
     put("deploy.tgz", "{release_folder}/deploy.tgz".format(**env))
 
 def put_settings():
-    if in_dev_mode():
+    if env.environment == "vagrant":
         return
     put("src/{project}/{environment}_settings.py".format(**env),
         "{current_link}/{project}/prod_settings.py".format(**env))
