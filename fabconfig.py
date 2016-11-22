@@ -5,3 +5,4 @@ SALT_HOST = "172.16.0.155"
 WEB_ROOT = DEPLOY_ROOT
 MANAGE_PREFIX = "mezblog/"
 MIGRATE_COMMAND = "migrate --noinput"
+DJANGO_SETTINGS= "settings"
