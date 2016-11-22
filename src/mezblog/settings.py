@@ -10,8 +10,6 @@ COMMENTS_REMOVED_VISIBLE = False
 MCE_DEFAULT_LEXERS = ['Python', 'JavaScript']
 MCE_DEFAULT_STYLE = 'pastie'
 
-JQUERY_FILENAME = 'jquery-1.7.1.min.js'
-
 #Turning off comment filtering, as I escape them on the way into the db
 COMMENT_FILTER = 'django_html_comments.models.comment_filter'
 
