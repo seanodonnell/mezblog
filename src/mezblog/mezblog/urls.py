@@ -4,7 +4,6 @@ from django.contrib import admin
 
 import mezzanine.blog.views as blog_views
 import mezarchive.views as mezarchive_views
-admin.autodiscover()
 
 # Add the urlpatterns for any custom Django applications here.
 # You can also change the ``home`` view to add your own functionality
