@@ -5,5 +5,5 @@ Mezzanine==4.2.2
 BeautifulSoup
 django_html_comments==0.3.1
 django_mce_pygments==0.1.2
-django_mce_spellcheck==0.1.1
+django_mce_spellcheck==0.1.2
 mysql-python
