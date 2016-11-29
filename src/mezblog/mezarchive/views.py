@@ -1,6 +1,6 @@
 from mezzanine.conf import settings
 from mezzanine.blog.models import BlogPost
-from mezzanine.utils.views import render
+from django.template.response import TemplateResponse
 
 
 def blog_post_archive(request, template="blog/blog_post_list.html"):
