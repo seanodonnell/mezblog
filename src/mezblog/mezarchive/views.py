@@ -19,4 +19,4 @@ def blog_post_archive(request, template="blog/blog_post_list.html"):
             self.object_list = object_list
 
     context = {"blog_posts": ObjectList(blog_posts)}
-    return render(request, "blog/blog_post_list.html", context)
+    return TemplateResponse(request, "blog/blog_post_list.html", context)
