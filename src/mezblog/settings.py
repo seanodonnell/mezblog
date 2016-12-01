@@ -402,11 +402,11 @@ try:
 except ImportError:
     pass
 
-
-try:
-    from prod_settings import *
-except ImportError:
-    pass
+if not os.path.exists('/opt/mezblog/vagrant'):
+    try:
+        from prod_settings import *
+    except ImportError:
+        pass
 
 
 
