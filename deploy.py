@@ -86,7 +86,7 @@ def _deploy():
     confirm_settings()
     prod_check()
     archive_build()
-#    link_dev_code()
+    link_dev_code()
     put_build_archives()
     extract_build_archives()
     create_links()
@@ -122,7 +122,7 @@ def link_dev_code():
     if in_dev_mode():
         if (exists(env.current_link) or is_link(env.current_link)):
             run("rm -rf {0}".format(env.current_link))
-            run("ln -s /vagrant/ {0}".format(env.current_link))
+            run("ln -s /vagrant/src {0}".format(env.current_link))
 
 
 def deploy_prod(environment, version, **overrides):
@@ -293,6 +293,7 @@ def restart_uwsgi():
         run("touch /tmp/%s" % env.project)
     else:
         print "warning, non graceful reload"
+        run("sudo service nginx restart")
         run("sudo service uwsgi restart")
 
 
