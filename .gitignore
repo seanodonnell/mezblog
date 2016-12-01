@@ -15,3 +15,4 @@ build
 dist
 .vagrant
 src/mezblog/prod_settings.py
+src/mezblog/static/
