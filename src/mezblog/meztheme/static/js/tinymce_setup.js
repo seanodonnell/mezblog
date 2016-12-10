@@ -47,7 +47,7 @@ if (typeof tinyMCE != 'undefined') {
         theme_advanced_toolbar_location: "top",
         theme_advanced_toolbar_align: "left",
         theme_advanced_statusbar_location: "",
-        theme_advanced_buttons1: "bold,italic,|,link,unlink,|,image,|,media,charmap,pygments,|,code,|,table,|,bullist,numlist,blockquote,|,undo,redo,|,formatselect,|,search,replace,|,spellchecker,|,fullscreen,",
+        theme_advanced_buttons1: "bold,italic,|,link,unlink,|,image,|,media,charmap,|,code,|,table,|,bullist,numlist,blockquote,|,undo,redo,|,formatselect,|,search,replace,|,spellchecker,|,fullscreen,",
         theme_advanced_buttons2: "",
         theme_advanced_buttons3: "",
         theme_advanced_path: false,
@@ -59,7 +59,7 @@ if (typeof tinyMCE != 'undefined') {
         theme_advanced_styles: "Image left-aligned=img_left;Image left-aligned (nospace)=img_left_nospacetop;Image right-aligned=img_right;Image right-aligned (nospace)=img_right_nospacetop;Image Block=img_block",
 
         // plugins
-        plugins: "contextmenu,tabfocus,searchreplace,fullscreen,image,link,paste,media,table,pygments,spellchecker",
+        plugins: "contextmenu,tabfocus,searchreplace,fullscreen,image,link,paste,media,table,spellchecker",
 
         // remove MS Word's inline styles when copying and pasting.
         paste_remove_spans: true,
@@ -92,7 +92,7 @@ $('input[type="submit"]').click(function(){
             for (var id in tinyMCE.editors) {
                 var ed = tinyMCE.editors[id];
                 if (ed.plugins && ed.plugins.spellchecker && ed.plugins.spellchecker.active) {
-                    ed.plugins.spellchecker._done();
+                        ed.plugins.spellchecker._done();
                 }
             }
         }
