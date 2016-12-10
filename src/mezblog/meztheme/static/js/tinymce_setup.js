@@ -22,7 +22,6 @@ if (typeof tinyMCE != 'undefined') {
         // main settings
         mode : "specific_textareas",
         editor_selector : "mceEditor",
-        theme: "advanced",
         language: "en",
         dialog_type: "window",
         editor_deselector : "mceNoEditor",
