@@ -36,7 +36,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
 
-  config.vm.provision :shell, :inline => "sudo nginx restart", run: "always"
+  config.vm.provision :shell, :inline => "sudo service nginx restart", run: "always"
   config.vm.provision :shell, :inline => "sudo service uwsgi start", run: "always"
 
   config.vm.provider "virtualbox" do |vb|
