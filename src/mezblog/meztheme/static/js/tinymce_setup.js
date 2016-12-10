@@ -6,7 +6,6 @@ function CustomFileBrowser(field_name, url, type, win) {
         height: 500,
         resizable: "yes",
         scrollbars: "yes",
-        inline: "yes",  // This parameter only has an effect if you use the inlinepopups plugin!
         close_previous: "no"
     }, {
         window: win,
@@ -60,7 +59,7 @@ if (typeof tinyMCE != 'undefined') {
         theme_advanced_styles: "Image left-aligned=img_left;Image left-aligned (nospace)=img_left_nospacetop;Image right-aligned=img_right;Image right-aligned (nospace)=img_right_nospacetop;Image Block=img_block",
 
         // plugins
-        plugins: "inlinepopups,contextmenu,tabfocus,searchreplace,fullscreen,image,link,paste,media,table,pygments,spellchecker",
+        plugins: "contextmenu,tabfocus,searchreplace,fullscreen,image,link,paste,media,table,pygments,spellchecker",
 
         // remove MS Word's inline styles when copying and pasting.
         paste_remove_spans: true,
