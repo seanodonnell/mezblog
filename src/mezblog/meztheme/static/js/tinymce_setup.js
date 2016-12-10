@@ -58,11 +58,9 @@ if (typeof tinyMCE != 'undefined') {
         theme_advanced_resize_horizontal : false,
         theme_advanced_resizing_use_cookie : true,
         theme_advanced_styles: "Image left-aligned=img_left;Image left-aligned (nospace)=img_left_nospacetop;Image right-aligned=img_right;Image right-aligned (nospace)=img_right_nospacetop;Image Block=img_block",
-        advlink_styles: "intern=internal;extern=external",
 
         // plugins
-        plugins: "inlinepopups,contextmenu,tabfocus,searchreplace,fullscreen,advimage,advlink,paste,media,table,pygments,spellchecker",
-        advimage_update_dimensions_onchange: true,
+        plugins: "inlinepopups,contextmenu,tabfocus,searchreplace,fullscreen,image,link,paste,media,table,pygments,spellchecker",
 
         // remove MS Word's inline styles when copying and pasting.
         paste_remove_spans: true,

@@ -383,7 +383,7 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 
 
 #Using a custom tinymce setup script (css/plugins)
-TINYMCE_SETUP_JS = '/static/js/tinymce_setup.js'
+TINYMCE_SETUP_JS = '/js/tinymce_setup.js'
 
 ##################
 # LOCAL SETTINGS #
