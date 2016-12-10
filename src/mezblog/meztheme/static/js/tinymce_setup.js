@@ -95,6 +95,4 @@ $('input[type="submit"]').click(function(){
                         ed.plugins.spellchecker._done();
                 }
             }
-        }
-});
-});
+        }});});
